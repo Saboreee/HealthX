@@ -16,5 +16,7 @@ public class Kayttajatiedot1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kayttajatiedot1);
+
+        Intent intent1 = getIntent();
     }
 }

@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#141414"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/Add"
         style="@android:style/Widget.DeviceDefault.Button.Small"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:onClick="sendMessage"
         android:text="+"
         android:textSize="25sp"
@@ -25,7 +24,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="419dp"
-        android:layout_height="57dp"
+        android:layout_height="40dp"
         android:background="#232323"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -36,11 +35,12 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/add2"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="#1B1B1B"
-        android:onClick="sendMessage"
+        android:id="@+id/edit"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#232323"
+        android:onClick="editProfile"
         android:text="..."
         android:textColor="#CFCFCF"
         android:textSize="25sp"
@@ -55,11 +55,10 @@
         android:id="@+id/DailyActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#141414"
         android:text="Daily activities"
         android:textAlignment="center"
         android:textColor="#E1E1E1"
-        android:textSize="41sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

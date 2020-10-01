@@ -21,4 +21,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddScreen.class);
         startActivity(intent);
     }
+    public void editProfile(View view) {
+        Intent intent1 = new Intent(this, Kayttajatiedot1.class);
+        startActivity(intent1);
+    }
 }
