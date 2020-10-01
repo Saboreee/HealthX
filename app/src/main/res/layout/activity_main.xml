@@ -9,28 +9,59 @@
 
     <Button
         android:id="@+id/Add"
-        android:layout_width="100dp"
-        android:layout_height="55dp"
+        style="@android:style/Widget.DeviceDefault.Button.Small"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:onClick="sendMessage"
         android:text="+"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="419dp"
+        android:layout_height="57dp"
+        android:background="#232323"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/add2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="#1B1B1B"
+        android:onClick="sendMessage"
+        android:text="..."
+        android:textColor="#CFCFCF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/DailyActivity"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/DailyActivity"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="#141414"
         android:text="Daily activities"
-        android:textSize="41sp"
+        android:textAlignment="center"
         android:textColor="#E1E1E1"
+        android:textSize="41sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.004"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
