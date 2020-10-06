@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddScreen"></activity>
-        <activity android:name=".Kayttajatiedot1"></activity>
+        <activity android:name=".treeni"></activity>
+        <activity android:name=".fiilis" />
+        <activity android:name=".AddScreen" />
+        <activity android:name=".Kayttajatiedot1" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

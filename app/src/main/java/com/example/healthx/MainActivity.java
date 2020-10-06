@@ -11,16 +11,28 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "MainActivity";
+    private ArrayList<Tiedot> Atiedot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Atiedot = Tiedot.getInstance().getAtiedot();
+        ListView mListView = (ListView) findViewById(R.id.listView);
+
+        /* Create the Tiedot objects */
+
+        TiedotListAdapter adapter = new TiedotListAdapter(this, R.layout.adapter_view_layout, Atiedot);
+        mListView.setAdapter(adapter);
 
         /* Locates the right TextView by id */
         TextView text1 = findViewById(R.id.M1);
@@ -38,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
         String pituus = sharedPreferences.getString("pituus", "");
         String paino = sharedPreferences.getString("paino", "");
 
+        /* Updated values to textview */
         text1.setText(name);
         text2.setText(ika);
         text3.setText(pituus);
         text4.setText(paino);
-
 
     }
 
