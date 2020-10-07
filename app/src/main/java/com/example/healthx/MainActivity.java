@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         TextView text4 = findViewById(R.id.M4);
 
         /* GetIntent to get Strings from form to MainActivity */
+        // Ei käytetä enään mutta se vaan on siinä xD!
         Intent intent2 = getIntent();
 
         /* Loads sharedpreference data and updates values */
