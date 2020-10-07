@@ -48,8 +48,8 @@ public class Kayttajatiedot1 extends AppCompatActivity {
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("nimi", sname);
             editor.putString("ika", sika);
-            editor.putString("pituus", spituus);
-            editor.putString("paino", spaino);
+            editor.putString("pituus", spituus+ " cm");
+            editor.putString("paino", spaino + " kg");
             editor.commit();
 
             /* When form filled and saved, opens MainActivity */

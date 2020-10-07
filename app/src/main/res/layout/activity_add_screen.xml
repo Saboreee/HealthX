@@ -7,29 +7,40 @@
     android:background="#141414"
     tools:context=".AddScreen">
 
-    <TextView
-        android:id="@+id/textView2"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:paddingLeft="15dp"
-        android:text="Lisää"
-        android:textColor="#E1E1E1"
-        android:textSize="40sp"
-        android:textAlignment="center"
+        android:layout_height="40dp"
+        android:background="#232323"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/dailyActivity4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Lisää"
+        android:textAlignment="center"
+        android:textColor="#E1E1E1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar4"
+        app:layout_constraintStart_toStartOf="@+id/toolbar4"
+        app:layout_constraintTop_toTopOf="@+id/toolbar4"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/Fiilis"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="-10dp"
         android:background="#1B1B1B"
         android:onClick="addfiilis"
-        android:paddingLeft="15dp"
         android:text="Fiilis"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -39,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -47,10 +58,8 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="-10dp"
         android:background="#1B1B1B"
         android:onClick="addTreeni"
-        android:paddingLeft="15dp"
         android:text="Treeni"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -68,9 +77,8 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="-10dp"
         android:background="#1B1B1B"
-        android:paddingLeft="15dp"
+        android:onClick="addNukkuminen"
         android:text="Nukkuminen"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -82,4 +90,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Treeni"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/bmi"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#1B1B1B"
+        android:onClick="bmilaskin"
+        android:text=" BMI laskin"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#E1E1E1"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uni"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

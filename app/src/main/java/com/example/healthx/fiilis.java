@@ -30,16 +30,23 @@ public class fiilis extends AppCompatActivity {
         error2 = (TextView) findViewById(R.id.Error2);
     }
 
+    /* Napin onclick, jos teksti kentän pituus = 0, laittaa error viestin kenttään tekstin.
+    Jos menee eteenpäin tulee else komento jonka sisällä on toinen if else ja tarkistaa sitä kautta, onko luku joka on annettu on oikein */
+
     public void Tallenna(View view) {
-        int a = Integer.parseInt(et.getText().toString());
-        if (a < 1 || a > 10) {
+        if(et.getText().length() == 0){
             error2.setText("Täytä fiilis asteikolla 1-10");
         } else {
-            Tiedot fiilis3 = new Tiedot("Fiilis", a);
-            Atiedot.add(fiilis3);
+            int a = Integer.parseInt(et.getText().toString());
+            if (a <= 0 || a >= 11) {
+                error2.setText("Täytä fiilis asteikolla 1-10");
+            } else {
+                Tiedot fiilis3 = new Tiedot("Fiilis", a, "1-10");
+                Atiedot.add(fiilis3);
 
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+            }
         }
     }
 }

@@ -6,14 +6,16 @@ public class Tiedot {
     private ArrayList<Tiedot> Atiedot;
     private int fiilis;
     private String nimireps;
+    private String info;
     private int reps;
     private int uni;
 
     private static Tiedot instance;
 
-    public Tiedot(String nimireps ,int reps) {
+    public Tiedot(String nimireps ,int reps, String info) {
         this.nimireps = nimireps;
         this.reps = reps;
+        this.info = info;
     }
 
     private Tiedot() {
@@ -42,6 +44,9 @@ public class Tiedot {
     }
     public String getNimireps() {
         return nimireps;
+    }
+    public String getInfo() {
+        return info;
     }
 
     public String toString() {

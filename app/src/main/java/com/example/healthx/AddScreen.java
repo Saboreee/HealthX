@@ -12,15 +12,24 @@ public class AddScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_screen);
-
-        Intent intent = getIntent();
     }
+    /* Fiilis napin onclick */
     public void addfiilis(View view) {
         Intent intent = new Intent(this, fiilis.class);
         startActivity(intent);
     }
+    /* Treeni napin onclick */
     public void addTreeni(View view) {
         Intent intent = new Intent(this, treeni.class);
+        startActivity(intent);
+    }
+    /* Nukkumis napin onclick */
+    public void addNukkuminen(View view) {
+        Intent intent = new Intent(this, nukkuminen.class);
+        startActivity(intent);
+    }
+    public void bmilaskin(View view) {
+        Intent intent = new Intent(this, bmilaskin.class);
         startActivity(intent);
     }
 }

@@ -10,17 +10,20 @@
     <Button
         android:id="@+id/Add"
         style="@android:style/Widget.DeviceDefault.Button.Small"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
         android:onClick="add"
         android:text="+"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -57,12 +60,13 @@
         android:id="@+id/DailyActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Daily activities"
+        android:text="Päivän aktiviteetit"
         android:textAlignment="center"
         android:textColor="#E1E1E1"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -104,8 +108,8 @@
         android:id="@+id/mika"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="270dp"
-        android:layout_marginLeft="270dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginLeft="260dp"
         android:layout_marginTop="30dp"
         android:text="Ikä:"
         android:textColor="#E1E1E1"
@@ -170,8 +174,8 @@
         android:id="@+id/mpituus2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="270dp"
-        android:layout_marginLeft="270dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginLeft="260dp"
         android:layout_marginTop="15dp"
         android:text="Paino:"
         android:textColor="#E1E1E1"
@@ -203,24 +207,38 @@
         android:id="@+id/yes"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginTop="30dp"
         android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/listView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mpituus" />
 
+    <TextView
+        android:id="@+id/lokit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="lokit"
+        android:textColor="#E1E1E1"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yes" />
+
     <ListView
         android:id="@+id/listView"
-        android:layout_width="412dp"
-        android:layout_height="531dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="411dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="20dp"
         android:divider="@android:color/background_light"
         android:dividerHeight="1px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mpituus" />
+        app:layout_constraintTop_toBottomOf="@+id/yes">
+
+    </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

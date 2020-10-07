@@ -31,17 +31,18 @@ public class treeni extends AppCompatActivity {
         error3 = (TextView) findViewById(R.id.Error3);
     }
 
+    /* Jos EditText kohdat on tyhjiä laittaa error tekstin, muuten tallentaa ja aloittaa intentin */
     public void Tallenna2(View view) {
-        int a = Integer.parseInt(et1.getText().toString());
-        tnimi = et2.getText().toString();
-        if (TextUtils.isEmpty(tnimi) || TextUtils.isEmpty(et1.getText().toString())){
+        if(et1.getText().length() == 0 || et2.getText().length() == 0){
             error3.setText("Täytä tyhjät kentät");
         } else {
-            Tiedot fiilis4 = new Tiedot(tnimi, a);
-            Atiedot.add(fiilis4);
+            int a = Integer.parseInt(et1.getText().toString());
+            tnimi = et2.getText().toString();
+                Tiedot fiilis4 = new Tiedot(tnimi, a, "toistot");
+                Atiedot.add(fiilis4);
 
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
         }
     }
 }

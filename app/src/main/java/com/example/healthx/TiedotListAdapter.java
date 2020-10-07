@@ -30,24 +30,27 @@ public class TiedotListAdapter extends ArrayAdapter<Tiedot> {
     @Override
     public View getView(int position,  View convertView, ViewGroup parent) {
 
-        /* Get the Tiedot information */
+        /* Saadaan Tiedot objektin metodista */
         String nimi = getItem(position).getNimireps();
         int reps = getItem(position).getReps();
+        String info = getItem(position).getInfo();
 
-        /* Create the Tiedot object with the information */
-        Tiedot tiedot = new Tiedot(nimi,reps);
+        /* Luodaan tiedot objekti */
+        Tiedot tiedot = new Tiedot(nimi,reps,info);
 
-        /* Not the best pattern to do adapter but in small content its fine. */
+        /* Ei paras koodaus patterni, että convertataan näkymä toiseen, esim jos tulisikin paljon tavaraa niin se voi olla hidas yms. */
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource, parent, false);
 
-        /* Puts the values into TextView */
+        /* Laittaa arvot tekstikenttiin */
         TextView tvnimi = (TextView) convertView.findViewById(R.id.txt1);
         TextView tvreps = (TextView) convertView.findViewById(R.id.txt2);
+        TextView tvinfo = (TextView) convertView.findViewById(R.id.txt3);
         tvnimi.setText(nimi);
         tvreps.setText(Integer.toString(reps));
+        tvinfo.setText(info);
 
-        /* Then returns the view that the user can see it */
+        /* Palautetaan muunnettu näkymä. */
         return convertView;
     }
 }

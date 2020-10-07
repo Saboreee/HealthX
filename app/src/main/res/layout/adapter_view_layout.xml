@@ -21,13 +21,23 @@
         android:layout_weight="50">
 
         <TextView
+            android:id="@+id/txt3"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:textSize="24dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="textview3"
             android:textColor="#E1E1E1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center"
             android:text="textview2"
-            android:id="@+id/txt2"/>
+            android:textColor="#E1E1E1"
+            android:textSize="24dp" />
     </LinearLayout>
 
 </LinearLayout>

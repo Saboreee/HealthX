@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".treeni"></activity>
+        <activity android:name=".bmilaskin"></activity>
+        <activity android:name=".nukkuminen" />
+        <activity android:name=".treeni" />
         <activity android:name=".fiilis" />
         <activity android:name=".AddScreen" />
         <activity android:name=".Kayttajatiedot1" />
